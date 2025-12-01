@@ -9,6 +9,11 @@ Project ini bertujuan membangun model machine learning untuk memprediksi risiko 
 📂 1. Project Overview
 
 Home Credit menghadapi tingkat kredit macet (NPL) yang cukup tinggi, berada di angka 8.1%.
+
+![https://github.com/francescothb/Final-Project-Project-Based-Virtual-Intern-Data-Scientist-Rakamin-x-Home-Credit/blob/d5fa1f2f0dfd1340b36826e808a162d3e7d12be2/Distribution%20of%20Target%20Variable.png](?raw=true)
+
+
+
 Melalui project ini, dilakukan analisis untuk:
 
 • Mengidentifikasi karakteristik debitur berisiko dan potensial
