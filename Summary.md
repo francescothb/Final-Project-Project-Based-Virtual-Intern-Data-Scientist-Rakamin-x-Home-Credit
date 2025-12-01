@@ -27,7 +27,7 @@ Dataset terdiri dari beberapa tabel terpisah, termasuk data aplikasi utama, riwa
 
 📊 2. Dataset Description
 
-Berikut penjelasan ringkas dataset utama yang digunakan:
+Berikut penjelasan ringkas keseluruhan dataset yang digunakan:
 
 • application_train/test.csv — Data utama setiap pengajuan kredit (satu baris = satu loan).
 
@@ -43,7 +43,7 @@ Berikut penjelasan ringkas dataset utama yang digunakan:
 
 • installments_payments.csv — Riwayat pembayaran angsuran kredit sebelumnya, termasuk pembayaran yang terlewat.
 
-Dari seluruh dataset, beberapa fitur digunakan sebagai input model berdasarkan ketersediaan dan relevansi.
+Dari beberapa dataset (train.csv, bureau.csv, previous_application.csv), beberapa fitur digunakan sebagai input model berdasarkan ketersediaan dan relevansi.
 
 
 🛠️ 3. Data Preprocessing
