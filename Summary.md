@@ -111,27 +111,27 @@ XGBoost dipilih karena memiliki kemampuan terbaik membedakan debitur macet dan t
 Target: HR, Manager, Higher Education, Mahasiswa
 Action:
 
-Terapkan fast auto-approve bila histori kredit bersih
+• Terapkan fast auto-approve bila histori kredit bersih
 
-Tawarkan pinjaman kedua otomatis bila pembayaran 3–6 bulan pertama lancar
+• Tawarkan pinjaman kedua otomatis bila pembayaran 3–6 bulan pertama lancar
 
 KPI:
 
-Return rate naik +5%
+• Return rate naik +5%
 
-Waktu approve berkurang 20–30%
+• Waktu approve berkurang 20–30%
 
 2. Kurangi Cancel/Unused Loan
 
 Target: Segmen pendidikan tinggi & profesi stabil
 Action:
 
-Berikan bunga lebih rendah (0.3–0.5%) bagi peminjam berkualitas
+• Berikan bunga lebih rendah (0.3–0.5%) bagi peminjam berkualitas
 
-Jalankan customer insight survey untuk mengetahui alasan pembatalan
+• Jalankan customer insight survey untuk mengetahui alasan pembatalan
 
 KPI:
 
-50% responden mengisi survey dalam 6 bulan
+• 50% responden mengisi survey dalam 6 bulan
 
-Cancel/unused rate turun 5% dalam 1 tahun
+• Cancel/unused rate turun 5% dalam 1 tahun
