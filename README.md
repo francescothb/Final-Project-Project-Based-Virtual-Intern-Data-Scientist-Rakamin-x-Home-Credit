@@ -11,53 +11,56 @@ Project ini bertujuan membangun model machine learning untuk memprediksi risiko 
 Home Credit menghadapi tingkat kredit macet (NPL) yang cukup tinggi, berada di angka 8.1%.
 Melalui project ini, dilakukan analisis untuk:
 
-Mengidentifikasi karakteristik debitur berisiko dan potensial
+• Mengidentifikasi karakteristik debitur berisiko dan potensial
 
-Memprediksi probabilitas gagal bayar secara akurat
+• Memprediksi probabilitas gagal bayar secara akurat
 
-Mendukung keputusan kredit yang lebih tepat
+• Mendukung keputusan kredit yang lebih tepat
 
-Menurunkan NPL menjadi 5% dalam 1 tahun
+• Menurunkan NPL menjadi 5% dalam 1 tahun
 
 Dataset terdiri dari beberapa tabel terpisah, termasuk data aplikasi utama, riwayat kredit, aplikasi sebelumnya, saldo bulanan, dan pembayaran angsuran.
+
 
 📊 2. Dataset Description
 
 Berikut penjelasan ringkas dataset utama yang digunakan:
 
-application_train/test.csv — Data utama setiap pengajuan kredit (satu baris = satu loan).
+• application_train/test.csv — Data utama setiap pengajuan kredit (satu baris = satu loan).
 
-bureau.csv — Riwayat kredit nasabah dari lembaga lain yang dilaporkan ke Credit Bureau.
+• bureau.csv — Riwayat kredit nasabah dari lembaga lain yang dilaporkan ke Credit Bureau.
 
-bureau_balance.csv — Riwayat bulanan dari setiap kredit nasabah yang tercatat di bureau.
+• bureau_balance.csv — Riwayat bulanan dari setiap kredit nasabah yang tercatat di bureau.
 
-previous_application.csv — Seluruh pengajuan pinjaman nasabah sebelumnya ke Home Credit.
+• previous_application.csv — Seluruh pengajuan pinjaman nasabah sebelumnya ke Home Credit.
 
-POS_CASH_balance.csv — Riwayat bulanan pinjaman POS & cash loan nasabah di Home Credit.
+• POS_CASH_balance.csv — Riwayat bulanan pinjaman POS & cash loan nasabah di Home Credit.
 
-credit_card_balance.csv — Riwayat bulanan penggunaan kartu kredit Home Credit.
+• credit_card_balance.csv — Riwayat bulanan penggunaan kartu kredit Home Credit.
 
-installments_payments.csv — Riwayat pembayaran angsuran kredit sebelumnya, termasuk pembayaran yang terlewat.
+• installments_payments.csv — Riwayat pembayaran angsuran kredit sebelumnya, termasuk pembayaran yang terlewat.
 
 Dari seluruh dataset, beberapa fitur digunakan sebagai input model berdasarkan ketersediaan dan relevansi.
+
 
 🛠️ 3. Data Preprocessing
 
 Langkah utama preprocessing:
 
-Integrasi dataset melalui join (application + bureau + previous application).
+• Integrasi dataset melalui join (application + bureau + previous application).
 
-Handling missing values dengan eliminasi kolom >40% missing dan imputasi.
+• Handling missing values dengan eliminasi kolom >40% missing dan imputasi.
 
-Encoding fitur kategorik (contoh: pendidikan menjadi Higher vs Lower Education).
+• Encoding fitur kategorik (contoh: pendidikan menjadi Higher vs Lower Education).
 
-Feature elimination berdasarkan korelasi tinggi antar variabel.
+• Feature elimination berdasarkan korelasi tinggi antar variabel.
 
-Imbalance handling menggunakan SMOTE.
+• Imbalance handling menggunakan SMOTE.
 
-Feature scaling untuk model berbasis jarak.
+• Feature scaling untuk model berbasis jarak.
 
-Train-test split (80:20) yang aman dari data leakage.
+• Train-test split (80:20).
+
 
 🔍 4. Exploratory Data Analysis (EDA) & Insights
 
@@ -65,11 +68,12 @@ Dua temuan utama:
 
 Insight 1 — Pendidikan Tinggi → Risiko Rendah
 
-Debitur dengan Higher Education dan Incomplete Higher memiliki tingkat pengembalian yang lebih baik serta persentase cancel/unused yang lebih rendah.
+• Debitur dengan Higher Education dan Incomplete Higher memiliki tingkat pengembalian yang lebih baik serta persentase cancel/unused yang lebih rendah.
 
 Insight 2 — Profesi HR & Manager → Repayment Rate Tinggi
 
-Kedua profesi ini menunjukkan selisih repaid vs approved tertinggi dan menjadi segmen paling stabil dalam histori pembayaran.
+• Kedua profesi ini menunjukkan selisih repaid vs approved tertinggi dan menjadi segmen paling stabil dalam histori pembayaran.
+
 
 🤖 5. Machine Learning Models
 
@@ -87,15 +91,16 @@ XGBoost
 
 Performa XGBoost pada data test:
 
-Accuracy: 0.8746
+• Accuracy: 0.8746
 
-Precision: 0.9466
+• Precision: 0.9466
 
-Recall: 0.7939
+• Recall: 0.7939
 
-AUC-ROC: 0.93
+• AUC-ROC: 0.93
 
 XGBoost dipilih karena memiliki kemampuan terbaik membedakan debitur macet dan tidak macet (AUC tertinggi), meskipun Random Forest unggul sedikit pada recall.
+
 
 💡 6. Business Recommendations
 1. Permudah Proses Persetujuan untuk Segmen Risiko Rendah
